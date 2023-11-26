@@ -1,3 +1,4 @@
+y
 INPUT=data/Ensembl.NCBIM37.67.bed
 <$INPUT cat | cut -f1 | sort |uniq -c | awk '{print $2, $1}'
 INPUT=/data-shared/fastq/fastq.tar.gz
@@ -9,3 +10,4 @@ INPUT=/data-shared/fastq/fastq.tar.gz
 # Function for filtering; use -v to pass arguments to awk to resolve quoting issues
 fastq-min-length() { paste - - - - |  awk -v min_len="$1" '(length($2) > min_len)' ;}
 
+# Just to see changes
